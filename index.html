@@ -3,79 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tec - Comandos Executar do Windows</title>
-    <link rel="icon" href="Meu.png" type="image/png">
+    <title>App Comandos Executar - Windows</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #0f172a;
-            color: white;
-            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            padding: 20px;
-            background: #1e293b;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+            background: #0078d4;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         header img {
             width: 80px;
+            height: auto;
         }
-        header h1 {
-            margin-top: 10px;
-            font-size: 26px;
-            color: #38bdf8;
-        }
-        .container {
+        main {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
-        .download-btn {
-            background: #38bdf8;
-            color: #0f172a;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
+        h1, h2 {
+            color: #0078d4;
+        }
+        .btn-download {
+            display: inline-block;
+            background: #0078d4;
+            color: white;
+            padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
-            transition: 0.3s;
-            display: inline-block;
-            margin-top: 20px;
+            font-weight: bold;
+            margin-top: 10px;
         }
-        .download-btn:hover {
-            background: #0ea5e9;
+        .btn-download:hover {
+            background: #005ea6;
         }
-        .comandos {
-            margin-top: 30px;
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
-        }
-        .comandos h2 {
-            color: #38bdf8;
-            text-align: center;
-        }
-        .comandos ul {
+        ul {
             list-style: none;
             padding: 0;
         }
-        .comandos li {
-            padding: 5px 0;
-            border-bottom: 1px solid #334155;
+        ul li {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
             margin-top: 30px;
-            padding: 20px;
-            background: #1e293b;
         }
-        footer a {
-            color: #38bdf8;
+        .social {
+            margin-top: 10px;
+        }
+        .social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
             text-decoration: none;
         }
-        /* Botão WhatsApp flutuante */
+        /* Botão flutuante WhatsApp */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -87,50 +83,47 @@
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             z-index: 100;
         }
-        .whatsapp-float img {
-            width: 40px;
-            margin-top: 10px;
+        .whatsapp-float i {
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <img src="Meu.png" alt="Ícone do Tec">
-    <h1>Tec - Comandos Executar do Windows</h1>
-</header>
-
-<div class="container">
-    <p>O <b>Tec</b> é um aplicativo que reúne e executa de forma prática os principais comandos da caixa "Executar" do Windows, ajudando técnicos e usuários a acessarem funções avançadas do sistema rapidamente.</p>
-
-    <a class="download-btn" href="Tec.exe" download>⬇ Baixar Aplicativo</a>
-
-    <div class="comandos">
-        <h2>Principais Comandos do Executar</h2>
+    <header>
+        <img src="Meu.png" alt="Logo do Aplicativo">
+        <h1>App - Comandos Executar do Windows</h1>
+        <p>Aprenda e utilize rapidamente os principais comandos do Executar no Windows</p>
+    </header>
+    <main>
+        <h2>O que você encontra no aplicativo</h2>
+        <p>O aplicativo reúne e explica os comandos mais úteis da caixa "Executar" do Windows, ajudando técnicos e usuários a acessar ferramentas rapidamente.</p>
+        
+        <h2>Principais Comandos</h2>
         <ul>
-            <li><b>cmd</b> – Abre o Prompt de Comando</li>
-            <li><b>powershell</b> – Abre o PowerShell</li>
-            <li><b>msconfig</b> – Configuração do Sistema</li>
-            <li><b>services.msc</b> – Gerenciador de Serviços</li>
-            <li><b>regedit</b> – Editor do Registro</li>
-            <li><b>taskmgr</b> – Gerenciador de Tarefas</li>
-            <li><b>control</b> – Painel de Controle</li>
-            <li><b>appwiz.cpl</b> – Programas e Recursos</li>
+            <li><b>cmd</b> - Abre o Prompt de Comando</li>
+            <li><b>msconfig</b> - Configuração do Sistema</li>
+            <li><b>services.msc</b> - Gerenciador de Serviços</li>
+            <li><b>regedit</b> - Editor de Registro</li>
+            <li><b>control</b> - Painel de Controle</li>
+            <li><b>taskmgr</b> - Gerenciador de Tarefas</li>
+            <li><b>appwiz.cpl</b> - Programas e Recursos</li>
         </ul>
-    </div>
-</div>
+        
+        <a href="Tec.exe" class="btn-download"><i class="fa fa-download"></i> Baixar Aplicativo</a>
+    </main>
+    <footer>
+        <p>Desenvolvido por Felipe Nunes</p>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/felipe-nunes-222a58304/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
 
-<footer>
-    <p>Desenvolvido por Felipe Nunes | <a href="https://www.linkedin.com/in/felipe-nunes-222a58304/" target="_blank">LinkedIn</a></p>
-</footer>
-
-<!-- Botão WhatsApp Flutuante -->
-<a href="https://wa.me/5511994444752" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511994444752" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
