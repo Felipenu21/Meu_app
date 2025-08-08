@@ -1,129 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Comandos Executar - Windows</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #0078d4;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        header img {
-            width: 80px;
-            height: auto;
-        }
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #0078d4;
-        }
-        .btn-download {
-            display: inline-block;
-            background: #0078d4;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .btn-download:hover {
-            background: #005ea6;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            background: white;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        .social {
-            margin-top: 10px;
-        }
-        .social a {
-            color: white;
-            margin: 0 10px;
-            font-size: 20px;
-            text-decoration: none;
-        }
-        /* Botão flutuante WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-            z-index: 100;
-        }
-        .whatsapp-float i {
-            margin-top: 15px;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tec - Comandos Executar Windows</title>
+<link rel="icon" href="Meu.png" type="image/png" />
+<style>
+  /* Reset e base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  header {
+    background-color: #0078d7;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  header p {
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+  section.download {
+    background: white;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.05);
+    text-align: center;
+  }
+  section.download a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 0.8rem 2.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  section.download a:hover {
+    background-color: #1ebe57;
+  }
+  section.commands {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.05);
+  }
+  section.commands h2 {
+    margin-bottom: 1rem;
+    color: #0078d7;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  ul.command-list {
+    list-style-type: none;
+  }
+  ul.command-list li {
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+  }
+  ul.command-list li strong {
+    color: #333;
+  }
+  footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  /* WhatsApp flutuante */
+  #whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #whatsapp-float:hover {
+    background-color: #1ebe57;
+  }
+  #whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+  /* LinkedIn flutuante */
+  #linkedin-float {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #0077b5;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #linkedin-float:hover {
+    background-color: #005582;
+  }
+  #linkedin-float img {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 600px) {
+    main {
+      margin: 1rem;
+    }
+    section.download a {
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <img src="Meu.png" alt="Logo do Aplicativo">
-        <h1>App - Comandos Executar do Windows</h1>
-        <p>Aprenda e utilize rapidamente os principais comandos do Executar no Windows</p>
-    </header>
-    <main>
-        <h2>O que você encontra no aplicativo</h2>
-        <p>O aplicativo reúne e explica os comandos mais úteis da caixa "Executar" do Windows, ajudando técnicos e usuários a acessar ferramentas rapidamente.</p>
-        
-        <h2>Principais Comandos</h2>
-        <ul>
-            <li><b>cmd</b> - Abre o Prompt de Comando</li>
-            <li><b>msconfig</b> - Configuração do Sistema</li>
-            <li><b>services.msc</b> - Gerenciador de Serviços</li>
-            <li><b>regedit</b> - Editor de Registro</li>
-            <li><b>control</b> - Painel de Controle</li>
-            <li><b>taskmgr</b> - Gerenciador de Tarefas</li>
-            <li><b>appwiz.cpl</b> - Programas e Recursos</li>
-        </ul>
-        
-        <a href="Tec.exe" class="btn-download"><i class="fa fa-download"></i> Baixar Aplicativo</a>
-    </main>
-    <footer>
-        <p>Desenvolvido por Felipe Nunes</p>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/felipe-nunes-222a58304/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
 
-    <!-- Botão flutuante WhatsApp -->
-    <a href="https://wa.me/5511994444752" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+<header>
+  <h1>Tec - Comandos Executar Windows</h1>
+  <p>Ferramentas essenciais para Suporte Técnico em Windows</p>
+</header>
+
+<main>
+  <section class="download">
+    <h2>Baixe o Instalador</h2>
+    <a href="https://github.com/Felipenu21/Meu_app/releases/download/v1.0.0/Tec.exe" download>
+      ⬇️ Download do Instalador Tec.exe
     </a>
+  </section>
+
+  <section class="commands">
+    <h2>Principais Comandos do Executar</h2>
+    <ul class="command-list">
+      <li><strong>cmd</strong> - Prompt de Comando</li>
+      <li><strong>powershell</strong> - PowerShell</li>
+      <li><strong>regedit</strong> - Editor de Registro</li>
+      <li><strong>msconfig</strong> - Configuração do Sistema</li>
+      <li><strong>taskmgr</strong> - Gerenciador de Tarefas</li>
+      <li><strong>services.msc</strong> - Serviços</li>
+      <li><strong>eventvwr</strong> - Visualizador de Eventos</li>
+      <li><strong>devmgmt.msc</strong> - Gerenciador de Dispositivos</li>
+      <li><strong>diskmgmt.msc</strong> - Gerenciamento de Disco</li>
+      <li><strong>control</strong> - Painel de Controle</li>
+      <li><strong>ncpa.cpl</strong> - Conexões de Rede</li>
+      <li><strong>notepad</strong> - Bloco de Notas</li>
+      <li><strong>calc</strong> - Calculadora</li>
+      <li><strong>mstsc</strong> - Área de Trabalho Remota</li>
+      <li><strong>cleanmgr</strong> - Limpeza de Disco</li>
+    </ul>
+  </section>
+</main>
+
+<!-- WhatsApp flutuante -->
+<a id="whatsapp-float" href="https://wa.me/5511994444752" target="_blank" title="WhatsApp Felipe">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+<!-- LinkedIn flutuante -->
+<a id="linkedin-float" href="https://www.linkedin.com/in/felipe-nunes-222a58304/" target="_blank" title="LinkedIn Felipe">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+</a>
+
+<footer>
+  © 2025 - Desenvolvido por Felipe Nunes
+</footer>
+
 </body>
 </html>
