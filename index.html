@@ -100,6 +100,7 @@
     box-shadow: 0 6px 16px #39a7f088;
     transition: background 0.25s ease;
     margin-top: 1rem;
+    text-align: center;
   }
   .btn-download:hover {
     background: #2b80c6;
@@ -118,6 +119,16 @@
   }
   ol.tutorial li strong {
     color: #39a7f0;
+  }
+  /* Dica box */
+  .tip {
+    background: #263238;
+    border-left: 4px solid #39a7f0;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0 2rem;
+    border-radius: 6px;
+    color: #b0bec5;
+    font-style: italic;
   }
   footer {
     background: #1a1a1a;
@@ -189,15 +200,17 @@
 <main>
   <section id="tutorial">
     <h2>📚 Tutorial: Como Usar os Comandos do Executar no Windows</h2>
-    <p>O Executar do Windows permite que você abra programas, pastas, documentos e configurações rapidamente. Veja o passo a passo para usar essa funcionalidade:</p>
+    <p>O Executar do Windows é uma ferramenta rápida para abrir programas, configurações e arquivos usando comandos simples. Vamos aprender a usar essa ferramenta poderosa passo a passo:</p>
+
     <ol class="tutorial">
-      <li><strong>Pressione</strong> as teclas <code>Win + R</code> para abrir a janela <em>Executar</em>.</li>
-      <li><strong>Digite</strong> o comando desejado, por exemplo, <code>cmd</code> para abrir o Prompt de Comando.</li>
-      <li><strong>Clique</strong> em <em>OK</em> ou pressione <code>Enter</code>.</li>
-      <li><strong>Aguarde</strong> o programa ou configuração abrir.</li>
-      <li><strong>Explore</strong> os comandos listados na seção “Principais Comandos” abaixo para tarefas comuns do Windows.</li>
-      <li><strong>Dica:</strong> muitos comandos abrem configurações específicas do Windows para facilitar ajustes avançados.</li>
+      <li><strong>Abra o Executar:</strong> pressione as teclas <code>Win + R</code> simultaneamente para abrir a janela <em>Executar</em>.</li>
+      <li><strong>Digite o comando:</strong> insira o nome do programa, configuração ou utilitário que deseja abrir. Por exemplo, <code>cmd</code> para abrir o Prompt de Comando.</li>
+      <li><strong>Confirme a ação:</strong> clique em <em>OK</em> ou pressione <code>Enter</code> no teclado.</li>
+      <li><strong>Aguarde o resultado:</strong> o programa ou a configuração será aberta automaticamente.</li>
+      <li><strong>Explore comandos:</strong> utilize a lista de comandos a seguir para acessar funcionalidades importantes do Windows com rapidez.</li>
     </ol>
+
+    <div class="tip">💡 <strong>Dica:</strong> Você pode usar comandos do Executar para acessar ferramentas avançadas de configuração e gerenciamento do Windows, economizando tempo e aumentando sua produtividade.</div>
   </section>
 
   <section id="comandos">
@@ -234,7 +247,7 @@
   <section id="download">
     <h2>⬇️ Baixe o Instalador</h2>
     <p>Instale o aplicativo completo com todos os comandos no seu computador Windows.</p>
-    <a href="https://github.com/Felipenu21/Meu_app/releases/download/v1.0.0/Tec.exe" download class="btn-download" aria-label="Download do Instalador">Download Instalador</a>
+    <a href="https://github.com/Felipenu21/Meu_app/releases/download/v1.0.0/TesteSetup.exe" download class="btn-download" aria-label="Download do Instalador">Download Instalador</a>
   </section>
 </main>
 
